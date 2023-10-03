@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6nf73bxhulea"]
+
+[ext_resource type="PackedScene" uid="uid://m0mum1rsyivw" path="res://Scenes/game_menu.tscn" id="1_38msq"]
+[ext_resource type="Script" path="res://Scripts/Management/TitleScreen.cs" id="1_vbl0u"]
+[ext_resource type="Texture2D" uid="uid://c3jhkhaf51ywr" path="res://Sprites/background_gbmist_dark_200x340.png" id="3_kl07s"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vbl0u")
+
+[node name="GameMenu" parent="." instance=ExtResource("1_38msq")]
+
+[node name="BackgroundGbmistDark200x340" type="Sprite2D" parent="."]
+position = Vector2(90, 160)
+texture = ExtResource("3_kl07s")

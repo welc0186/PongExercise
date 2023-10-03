@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        { 
+            "name": "Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "C:/Godot/v4.1.1/Godot.exe",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}

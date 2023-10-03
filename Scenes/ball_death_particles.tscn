@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://fqwdrx4rv80w"]
+
+[ext_resource type="Texture2D" uid="uid://c1y0eslf4p7vl" path="res://Sprites/ball_white_10x10.png" id="1_2lbfr"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/BallDeathParticles.cs" id="2_0uaty"]
+
+[sub_resource type="Gradient" id="Gradient_edbg3"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.313316, 0.694517)
+colors = PackedColorArray(0.117647, 0.376471, 0.431373, 1, 0.352941, 0.72549, 0.658824, 1, 0.768627, 0.941176, 0.760784, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tfmms"]
+gradient = SubResource("Gradient_edbg3")
+width = 3
+
+[sub_resource type="Curve" id="Curve_et6md"]
+_data = [Vector2(0, 0.48421), 0.0, 0.0, 0, 0, Vector2(0.504831, 0.831579), 0.0, 0.0, 0, 0, Vector2(1, 0.463158), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ako73"]
+curve = SubResource("Curve_et6md")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nxu0k"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 15.0
+initial_velocity_max = 250.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_ako73")
+color_ramp = SubResource("GradientTexture1D_tfmms")
+
+[node name="BallDeathParticles" type="GPUParticles2D"]
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_nxu0k")
+texture = ExtResource("1_2lbfr")
+one_shot = true
+explosiveness = 0.9
+randomness = 0.5
+script = ExtResource("2_0uaty")

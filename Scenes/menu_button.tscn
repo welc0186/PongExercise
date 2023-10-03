@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhkym5fdf82y6"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MenuButton.cs" id="1_ft482"]
+
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "New Game"
+script = ExtResource("1_ft482")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl4umf0ocd1lf"]
+
+[ext_resource type="Script" path="res://Scripts/Audio/SFXAudioPlayer.cs" id="1_klxne"]
+[ext_resource type="Script" path="res://Scripts/Audio/MusicPlayer.cs" id="2_sjwms"]
+[ext_resource type="Script" path="res://Scripts/Audio/BusManager.cs" id="3_rbrg3"]
+
+[node name="AudioManager" type="Node"]
+
+[node name="SFXAudioPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("1_klxne")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("2_sjwms")
+
+[node name="BusManager" type="Node" parent="."]
+script = ExtResource("3_rbrg3")

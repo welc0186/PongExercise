@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://br7kaw2bpkm3y"]
+
+[ext_resource type="FontFile" uid="uid://j3ssanj7c58v" path="res://Fonts/good-times/good times rg.otf" id="1_4mtar"]
+[ext_resource type="StyleBox" uid="uid://dyvf6by46mr03" path="res://Themes/button_style_box_focus.tres" id="2_ti145"]
+[ext_resource type="Texture2D" uid="uid://bbm7lrhlfg705" path="res://Sprites/ball_mistgblight_10x10.png" id="3_xy1h4"]
+[ext_resource type="StyleBox" uid="uid://dgdxuql2r1wx2" path="res://Themes/border_style_box.tres" id="3_yoruo"]
+[ext_resource type="Texture2D" uid="uid://c1y0eslf4p7vl" path="res://Sprites/ball_white_10x10.png" id="4_lo5lb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyvm4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vb4a2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pg83"]
+bg_color = Color(0.768627, 0.941176, 0.760784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3snm"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+Button/colors/font_color = Color(0.768627, 0.941176, 0.760784, 1)
+Button/fonts/font = ExtResource("1_4mtar")
+Button/styles/focus = ExtResource("2_ti145")
+Button/styles/hover = SubResource("StyleBoxEmpty_jyvm4")
+Button/styles/normal = SubResource("StyleBoxEmpty_vb4a2")
+HSlider/icons/grabber = ExtResource("3_xy1h4")
+HSlider/icons/grabber_highlight = ExtResource("4_lo5lb")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_0pg83")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_l3snm")
+Label/colors/font_color = Color(0.768627, 0.941176, 0.760784, 1)
+Label/fonts/font = ExtResource("1_4mtar")
+PanelContainer/styles/panel = ExtResource("3_yoruo")

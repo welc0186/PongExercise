@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7722cl0lf82x"]
+
+[ext_resource type="Theme" uid="uid://br7kaw2bpkm3y" path="res://Themes/HUD_theme.tres" id="1_ubikm"]
+[ext_resource type="Script" path="res://Scripts/UI/ScoreLabel.cs" id="2_ktbcf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1wk5y"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme = ExtResource("1_ubikm")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1wk5y")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+text = "999"
+horizontal_alignment = 2
+script = ExtResource("2_ktbcf")

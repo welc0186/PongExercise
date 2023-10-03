@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://b7430soaq8sar"]
+
+[ext_resource type="Texture2D" uid="uid://bbm7lrhlfg705" path="res://Sprites/ball_mistgblight_10x10.png" id="1_hyy3a"]
+
+[resource]
+texture = ExtResource("1_hyy3a")
+draw_center = false

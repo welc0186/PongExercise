@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://m0mum1rsyivw"]
+
+[ext_resource type="Script" path="res://Scripts/UI/GameMenu.cs" id="1_hjr2m"]
+[ext_resource type="Theme" uid="uid://br7kaw2bpkm3y" path="res://Themes/HUD_theme.tres" id="2_d42al"]
+
+[node name="GameMenu" type="CanvasLayer"]
+script = ExtResource("1_hjr2m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.372549)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_d42al")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 30
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MenuItems" type="VBoxContainer" parent="Control/MarginContainer/PanelContainer"]
+layout_mode = 2
